@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.grafika">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
+    <!-- <uses-feature android:name="android.hardware.type.watch" /> -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.grafika.ReadPixelsActivity"
+            android:label="@string/title_activity_read_pixels" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.PlayMovieActivity"
+            android:label="@string/title_activity_play_movie" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.LiveCameraActivity"
+            android:label="@string/title_activity_live_camera" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.CameraCaptureActivity"
+            android:label="@string/title_activity_camera_capture" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.TextureViewGLActivity"
+            android:label="@string/title_activity_texture_view_gl" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.TextureViewCanvasActivity"
+            android:label="@string/title_activity_texture_view_canvas" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.RecordFBOActivity"
+            android:label="@string/title_activity_record_fbo"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+
+            <!-- android:screenOrientation="landscape" -->
+            <!--
+                 Without the NoTitleBar theme, the widgets are partially transparent,
+                 and the SurfaceView colors bleed through.  Not sure why that is.
+            -->
+            <!-- android:theme="@android:style/Theme.NoTitleBar.Fullscreen" -->
+        </activity>
+        <activity
+            android:name="com.android.grafika.ChorTestActivity"
+            android:label="@string/title_activity_chor_test" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.DoubleDecodeActivity"
+            android:label="@string/title_activity_double_decode" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.ContinuousCaptureActivity"
+            android:label="@string/title_activity_continuous_capture" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.SoftInputSurfaceActivity"
+            android:label="@string/title_activity_soft_input_surface" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.HardwareScalerActivity"
+            android:label="@string/title_activity_hardware_scaler"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.GlesInfoActivity"
+            android:label="@string/title_activity_gles_info" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.PlayMovieSurfaceActivity"
+            android:label="@string/title_activity_play_movie_surface" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.MultiSurfaceActivity"
+            android:label="@string/title_activity_multi_surface_test"
+            android:theme="@android:style/Theme.Holo" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.CodecOpenActivity"
+            android:label="@string/title_activity_codec_open" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.TextureUploadActivity"
+            android:label="@string/title_activity_texture_upload" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.ColorBarActivity"
+            android:label="@string/title_color_bar"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.ScheduledSwapActivity"
+            android:label="@string/title_scheduled_swap"
+            android:theme="@android:style/Theme.Black" >
+        </activity>
+        <activity
+            android:name="com.android.grafika.TextureFromCameraActivity"
+            android:label="@string/title_texture_from_camera"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+    </application>
+
+</manifest>
